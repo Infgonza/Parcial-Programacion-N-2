@@ -9,11 +9,16 @@ public class Auto extends Vehiculo{
         super(marca, modelo, color, patente, precio, año);
         this.cantPuertas = cantPuertas;
     }
+    
 
     @Override
     public String toString() {
         return "Auto{" + "cantPuertas=" + cantPuertas + ", " + super.toString() +'}';
     }
     
+    @Override
+    public String getTipo() {
+        return "Auto";
+    }
     
 }

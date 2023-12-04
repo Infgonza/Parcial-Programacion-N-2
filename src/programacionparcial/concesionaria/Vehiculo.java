@@ -70,6 +70,22 @@ public class Vehiculo {
     public String toString() {
         return " marca=" + marca + ", modelo=" + modelo + ", color=" + color + ", patente=" + patente + ", precio=" + precio + ", a\u00f1o=" + año + '}';
     }
+
+    public Object getTipo() {
+        return "";
+    }
+
+    public Object getCantPuertas() {
+        return 0;
+    }
+
+    public Object getCilindrada() {
+        return 0;
+    }
+
+    public Object getPesoMax() {
+        return 0.0;
+    }
     
     
     

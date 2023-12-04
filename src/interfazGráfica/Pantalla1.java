@@ -4,6 +4,7 @@ public class Pantalla1 extends javax.swing.JFrame {
 
     public Pantalla1() {
         initComponents();
+        //Concesionaria c= new Concesionaria("Racing");
     }
 
     @SuppressWarnings("unchecked")
@@ -17,6 +18,7 @@ public class Pantalla1 extends javax.swing.JFrame {
         btnEliminarVehiculo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(752, 444));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -41,6 +43,11 @@ public class Pantalla1 extends javax.swing.JFrame {
         btnListaDeVehiculos.setForeground(new java.awt.Color(255, 255, 255));
         btnListaDeVehiculos.setText("LISTA DE VEHICULOS");
         btnListaDeVehiculos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnListaDeVehiculos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListaDeVehiculosActionPerformed(evt);
+            }
+        });
 
         btnEliminarVehiculo.setBackground(new java.awt.Color(51, 51, 51));
         btnEliminarVehiculo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -59,7 +66,7 @@ public class Pantalla1 extends javax.swing.JFrame {
                 .addComponent(btnAgregarVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnEliminarVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblConcesionaria)
@@ -75,7 +82,7 @@ public class Pantalla1 extends javax.swing.JFrame {
                     .addComponent(btnListaDeVehiculos, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAgregarVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEliminarVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(183, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -96,7 +103,15 @@ public class Pantalla1 extends javax.swing.JFrame {
         AgregarVehiculo av = new AgregarVehiculo();
         av.setVisible(true);
         av.setLocationRelativeTo(null);
+        this.setVisible(false);
     }//GEN-LAST:event_btnAgregarVehiculoActionPerformed
+
+    private void btnListaDeVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListaDeVehiculosActionPerformed
+        ListaDeVehiculos ldv = new ListaDeVehiculos();
+        ldv.setVisible(true);
+        ldv.setLocationRelativeTo(null);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnListaDeVehiculosActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregarVehiculo;

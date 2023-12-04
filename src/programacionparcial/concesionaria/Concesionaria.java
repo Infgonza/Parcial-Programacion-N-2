@@ -7,8 +7,12 @@ import java.util.List;
 public class Concesionaria {
     
     private String nombre;
-    private List <Vehiculo> inventario;
-
+    private static List<Vehiculo> inventario = new ArrayList<>();
+    
+    public static List<Vehiculo> obtenerInventario() {
+        return inventario;
+    }
+    
     public Concesionaria(String nombre) {
         this.nombre = nombre;
         this.inventario = new ArrayList<>();
@@ -19,8 +23,8 @@ public class Concesionaria {
                 System.out.println("No hay vehiculos");
                 System.out.println("-------------------------------------------------");
             } else{
-                for (int i = 0; i < inventario.size(); i++) {
-                    System.out.println(inventario.get(i));
+                for (Vehiculo vehiculo : inventario) {
+                    System.out.println(vehiculo);
                     System.out.println("-------------------------------------------------");
             }
         }

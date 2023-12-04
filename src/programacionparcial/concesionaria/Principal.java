@@ -1,6 +1,5 @@
 package programacionparcial.concesionaria;
 
-import interfazGráfica.AgregarVehiculo;
 import interfazGráfica.Pantalla1;
 
 public class Principal {
@@ -9,15 +8,13 @@ public class Principal {
     public static void main(String[] args) {
         
         //Creamos un objeto tipo Concesionaria
-        Concesionaria c= new Concesionaria ("Racing");
+        //Concesionaria c= new Concesionaria ("Racing");
         
         //Llamamos y hacemso visible a la interfaz grafica
         Pantalla1 pantallaPrincipal= new Pantalla1();
         pantallaPrincipal.setVisible(true);
         pantallaPrincipal.setLocationRelativeTo(null);
-        
-        AgregarVehiculo pantallaAgregarVehiculo = new AgregarVehiculo(c, pantallaPrincipal);
-        
+        /*
         // Vemos la lista de vehiculos.
         c.listVehiculos();
         // Agregamos un auto.
@@ -38,6 +35,8 @@ public class Principal {
         c.eliminarVehiculo("ASQ123");
         // Vemos de nuevo la lista de vehiculos pero ahora con un vehiculo eliminado.
         c.listVehiculos();
+        */
+        
         
         
     }

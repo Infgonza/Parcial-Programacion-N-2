@@ -14,6 +14,9 @@ public class Camioneta extends Vehiculo{
         return "Camioneta{" + "pesoMax=" + pesoMax + ", " + super.toString() +'}';
     }
     
-    
+    @Override
+    public String getTipo() {
+        return "Camioneta";
+    }
     
 }

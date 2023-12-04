@@ -14,5 +14,9 @@ public class Moto extends Vehiculo {
         return "Moto{" + "cilindrada=" + cilindrada + ", " + super.toString() +'}';
     }
     
+    @Override
+    public String getTipo() {
+        return "Moto";
+    }
     
 }
